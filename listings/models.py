@@ -19,7 +19,7 @@ class Listing(models.Model):
   sqft = models.IntegerField()
   lot_size = models.DecimalField(max_digits=5, decimal_places=1)
   is_published = models.BooleanField(default=True)
-  list_date = models.DateTimeField(default=datetime.now(), blank=True)
+  list_date = models.DateTimeField(default=datetime.now, blank=True)
   photo_main = models.ImageField(upload_to='photos/%y/%m/%d/')
   photo_1 = models.ImageField(upload_to='photos/%y/%m/%d/')
   photo_2 = models.ImageField(upload_to='photos/%y/%m/%d/')
