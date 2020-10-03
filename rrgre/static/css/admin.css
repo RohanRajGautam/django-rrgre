@@ -23,6 +23,7 @@ div.breadcrumbs {
 
 div.breadcrumbs a {
   color: #10284e;
+  margin-bottom: 5px;
 }
 
 .module h2, .module caption, .inline-group h2 {
