@@ -67,39 +67,26 @@
   <div class="container">
     <h2 class="text-center">Our Team</h2>
     <div class="row text-center">
-      <div class="col-md-4">
-        <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-        <h4>Ramesh Rai</h4>
-        <p class="text-success">
-          <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (980)-555-5555</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> ramesh@rrgrealestate.com.np</p>
-      </div>
-
-      <div class="col-md-4">
-        <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-        <h4>Prajwal Gurung</h4>
-        <p class="text-success">Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (980)-444-4444</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> prajwal@rrgrealestate.com.np</p>
-      </div>
-
-      <div class="col-md-4">
-        <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-        <h4>Payal Sharma</h4>
-        <p class="text-success">Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (980)-333-3333</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> payal@rrgrealestate.com.np</p>
-      </div>
+      {% if realtors %}
+        {% for realtor in realtors %}
+          <div class="col-md-4">
+            <img src="{{ realtor.photo.url }}" alt="" class="img-thumbnail mb-3">
+            <h4>{{ realtor.name }}</h4>
+            <p class="text-success">
+              <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+            <hr>
+            <p>
+              <i class="fas fa-phone"></i> {{ realtor.phone }}</p>
+            <p>
+              <i class="fas fa-envelope-open"></i> {{ realtor.email }}</p>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="col-md-12">
+          <p>No Realtors Available</p>
+        </div>
+      {% endif %}
+      
     </div>
   </div>
 </section>
