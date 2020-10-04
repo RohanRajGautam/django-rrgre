@@ -32,13 +32,9 @@
                   <label class="sr-only">State</label>
                   <select name="state" class="form-control">
                     <option selected="true" disabled="disabled">State (All)</option>
-                    <option value="1">Province No. 1</option>
-                    <option value="2">Province No. 2</option>
-                    <option value="3">Bagmati Pradesh</option>
-                    <option value="4">Gandaki Pradesh</option>
-                    <option value="5">Province No. 5</option>
-                    <option value="6">Karnali Pradesh</option>
-                    <option value="7">Sudurpashchim Pradesh</option>
+                      {% for key, value in state_choices.items %} 
+                        <option value="{{key}}">{{value}}</option>
+                      {% endfor %}
                   </select>
                 </div>
               </div>
@@ -48,31 +44,17 @@
                   <label class="sr-only">Bedrooms</label>
                   <select name="bedrooms" class="form-control">
                     <option selected="true" disabled="disabled">Bedrooms (All)</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+                    {% for key, value in bedroom_choices.items %} 
+                        <option value="{{key}}">{{value}}</option>
+                      {% endfor %}
                   </select>
                 </div>
                 <div class="col-md-6 mb-3">
                   <select name="price" class="form-control" id="type">
                     <option selected="true" disabled="disabled">Max Price (Any)</option>
-                    <option value="100000">Rs 100,000</option>
-                    <option value="200000">Rs 200,000</option>
-                    <option value="300000">Rs 300,000</option>
-                    <option value="400000">Rs 400,000</option>
-                    <option value="500000">Rs 500,000</option>
-                    <option value="600000">Rs 600,000</option>
-                    <option value="700000">Rs 700,000</option>
-                    <option value="800000">Rs 800,000</option>
-                    <option value="900000">Rs 900,000</option>
-                    <option value="1000000">Rs 1M+</option>
+                    {% for key, value in price_choices.items %} 
+                        <option value="{{key}}">{{value}}</option>
+                      {% endfor %}
                   </select>
                 </div>
               </div>
