@@ -41,7 +41,7 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mr-3"
-          {% if 'register' == request.path %}
+          {% if 'register' in request.path %}
            class="nav-item active mr-3"
           {% else %}
            class="nav-item mr-3"
@@ -51,7 +51,7 @@
             <i class="fas fa-user-plus"></i> Register</a>
         </li>
         <li class="nav-item mr-3"
-        {% if 'login' == request.path %}
+        {% if 'login' in request.path %}
           class="nav-item active mr-3"
         {% else %}
           class="nav-item mr-3"
