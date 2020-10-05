@@ -1,1 +1,1 @@
-web: gunicorn rrgre.wsgi --log-file -
+web: gunicorn rrgre.wsgi
