@@ -82,7 +82,7 @@ DATABASES = {
     }
 }
 
-postgresql-graceful-86873 = dj_database_url.config(conn_max_age=600)
+postgresql-graceful-86873 = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(postgresql-graceful-86873)
 
 # Password validation
