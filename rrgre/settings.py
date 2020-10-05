@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 import dj_database_url
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,8 +83,8 @@ DATABASES = {
     }
 }
 
-prod_db = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(prod_db)
+postgresql-graceful-86873 = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(postgresql-graceful-86873)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -140,3 +141,6 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
